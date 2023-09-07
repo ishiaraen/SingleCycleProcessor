@@ -1,0 +1,7 @@
+module alu_tb();
+		logic clk, zero;
+		logic [63:0] a, b,
+		logic [3:0] ALUControl,
+		logic [63:0] result,
+		
+		

@@ -1,0 +1,52 @@
+# do SingleCycleProcessor_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/nehu/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+/home/nehu/Documents/SingleCycleProcessor {/home/nehu/Documents/SingleCycleProcessor/signext.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:53:43 on Sep 07,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/nehu/Documents/SingleCycleProcessor" /home/nehu/Documents/SingleCycleProcessor/signext.sv 
+# -- Compiling module signext
+# 
+# Top level modules:
+# 	signext
+# End time: 15:53:43 on Sep 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+/home/nehu/Documents/SingleCycleProcessor {/home/nehu/Documents/SingleCycleProcessor/signext_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:53:43 on Sep 07,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/nehu/Documents/SingleCycleProcessor" /home/nehu/Documents/SingleCycleProcessor/signext_tb.sv 
+# -- Compiling module signext_tb
+# 
+# Top level modules:
+# 	signext_tb
+# End time: 15:53:43 on Sep 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  signext_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" signext_tb 
+# Start time: 15:53:43 on Sep 07,2023
+# Loading sv_std.std
+# Loading work.signext_tb
+# Loading work.signext
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#          6 tests completed with          0 errors
+# ** Note: $stop    : /home/nehu/Documents/SingleCycleProcessor/signext_tb.sv(41)
+#    Time: 61 ns  Iteration: 0  Instance: /signext_tb
+# Break in Module signext_tb at /home/nehu/Documents/SingleCycleProcessor/signext_tb.sv line 41
+# End time: 15:57:17 on Sep 07,2023, Elapsed time: 0:03:34
+# Errors: 0, Warnings: 0
